@@ -1,0 +1,30 @@
+// _mixins
+// ========
+
+@mixin display-text($fontFamily, $fontSz, $lineHeight, $spacing, $color, $tt, $fw) {
+    font-family: $fontFamily;
+    font-size: $fontSz;
+    line-height: $lineHeight;
+    letter-spacing: $spacing;
+    color: $color;
+    text-transform: $tt;
+    font-weight: $fw;
+}
+
+@mixin max($max) {
+    @media screen and (max-width: unquote($max + "px")) {
+        @content;
+    }
+}
+
+@mixin min($min) {
+    @media screen and (min-width: unquote($min + "px")) {
+        @content;
+    }
+}
+
+@mixin minmax($min, $max) {
+    @media screen and (min-width: unquote($min + "px")) and (max-width: unquote($max + "px")) {
+        @content;
+    }
+}

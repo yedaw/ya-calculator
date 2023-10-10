@@ -1,0 +1,187 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+html{
+    overflow: hidden;
+}
+html, body {
+    // min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.App, #root{
+    min-height: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+.main{
+    height: calc(100% - 44px);
+    overflow: auto;
+    background: $light;
+    padding-top: 50px;
+    padding-bottom: 70px;
+
+   &::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+        margin-top: 10px;
+        margin-bottom: 44px;
+    }
+
+   &::-webkit-scrollbar{
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+   &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $muted;
+    }
+
+
+    h1{
+        @include display-text($dg, 24px, 1.1, .03em, $main, none, null);
+    }
+    h2{
+        @include display-text($dg, 22px, 1.1, .03em, $main, none, null);
+    }
+    p, li{
+        @include display-text($dg, 16px, 1.2, 0, $main, none, null);
+    }
+    ul{
+        width: fit-content;
+        margin: auto;
+        text-align: left;
+        padding: 0;
+        /* Remove default bullets */
+        list-style: none; 
+        li::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: $darkhighlight; /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+            vertical-align: text-top;
+          }
+    }
+
+    /* FORM STYLING */
+    .form-group{
+        margin-top: 15px;
+    }
+    button, input[type="submit"]{
+        @include display-text($dg, 16px, 1.2, 0, $light, none, null);
+        margin-top: 15px;
+        text-align: left;
+        display: block;
+        padding: 5px 10px;
+        background: $main;
+        border: none;
+        text-align: center;
+        // border: 1px solid $main;
+        // border-radius: 25%/50%;
+        cursor: pointer;
+        &:hover{
+            // color: $darkhighlight;
+            background: $darkhighlight;
+        }
+    }
+
+}
+.homepage{
+    p{
+        font-family: $gh;
+        font-family: $lora;
+        // text-transform: uppercase;
+        font-size: 30px;
+        color: $main;
+        font-weight: 600;
+        &.hello{
+            font-size: 50px;
+            text-align: left;
+            transform: rotate(-10deg);
+            width: fit-content;
+        }
+        .highlight{
+            color: $highlight;
+            font-family: inherit;
+        }
+    }
+    @keyframes wave {
+        0% {transform: rotate(-25deg);margin-right:50px}
+        14% {transform: rotate(65deg);}
+        28% {transform: rotate(-25deg);}
+        42% {transform: rotate(65deg);}
+        56% {transform: rotate(-25deg);}
+        70% {transform: rotate(65deg);}
+        84% {transform: rotate(-25deg);margin-right:50px}
+        100% {transform: rotate(0deg);margin-right:5px}
+    }
+    .wave{
+        transform-origin: right bottom;
+        display: inline-block;
+        margin-right: 5px;
+        animation: wave 3.75s ease-in-out;
+    }
+}
+.main-inner{
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+}
+.footer{
+    background: $light;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    a{
+        margin-left: 10px;
+        margin-right: 10px;
+        svg{
+            fill: $main;
+            vertical-align: middle;
+            path{
+                fill: $main;
+            }
+        }
+        &.has-emoji{
+            &:hover{
+                .emoji{
+                    scale: 1.2;
+                }
+            }
+        }
+        .emoji{
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+        }
+        &:hover{
+            svg, svg path{
+                fill: $darkhighlight;
+            }
+        }
+    }
+}
+.profile{
+    padding: 15px;
+    .example-image{
+        max-width: 100%;
+        margin: auto;
+        display: block;
+        height: auto;
+    }
+}

@@ -1,0 +1,18 @@
+@import "fonts";
+@import "variables";
+
+.navigation{
+    background: $muted;
+    padding: 7.5px 15px;
+    a{
+        font-family: $inter;
+        text-transform: capitalize;
+        color: #fff;
+        padding: 7.5px 15px;
+        text-decoration: none;
+        &:hover{
+            background: $darkhighlight;
+            color: $main;
+        }
+    }
+}
