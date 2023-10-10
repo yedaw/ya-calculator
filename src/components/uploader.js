@@ -7,7 +7,7 @@ export const Uploader = (props) => {
     const [text, setText] = useState(undefined);
     const [selectedImage, setSelectedImage] = useState(null);
     const [notFound, setNotFound] = useState(undefined);
-    let attributeObj = [];
+    const [attributeObj, setAttributeObj] = useState([]);
     const doOCR = () => {
         if (selectedImage !== null){
 
@@ -15,8 +15,7 @@ export const Uploader = (props) => {
                 const worker = await createWorker('eng');
                 const image = await worker.recognize(selectedImage);
                 setText(image.data.text)
-    
-                
+
                 await worker.terminate();
             })()
         }
@@ -26,8 +25,7 @@ export const Uploader = (props) => {
         let attributeInputs = ['SprintSpeed', 'Acceleration', 'Finishing', 'Positioning', 'ShotPower', 'LongShots', 'Penalties', 'Volleys', 'Vision', 'Crossing', 'freeKick', 'longpassing', 'shortpassing', 'Curve', 'Agility', 'Balance', 'Reactions', 'Composure', 'ballcontrol', 'Dribbling', 'Interceptions', 'Heading', 'marking', 'standingTackle', 'Slidingtackle',  'Jumping', 'Stamina', 'Strength', 'Aggression']
         
         var notfound = []
-        attributeObj = []
-
+        var object = []
         if ( text !== undefined ){
             attributeNames.forEach(attribute => {
                 var attrValue = 0;
@@ -35,45 +33,53 @@ export const Uploader = (props) => {
                     var value = text.split(attribute)[1];
                     var value2 = value.split(' ');
                     var finalV = value2[1].slice(0, 2) 
-                    
-                    attrValue = finalV
-
-                    var attributeName = attributeInputs[attributeNames.indexOf(attribute)];
-
-                    var obj = { 'name' : attributeName, 'value' : attrValue };
-                    attributeObj.push(obj)
+                    if(!isNaN(finalV)){
+                        attrValue = finalV
+                    } else {
+                        attrValue = 0
+                    }
                 } else {
                     notfound.push(attribute)
                     attrValue = 0
                 }
+                var attributeName = attributeInputs[attributeNames.indexOf(attribute)];
+                var obj = { 'name' : attributeName, 'value' : attrValue };
+                object.push(obj)
             })
             setNotFound('Image read. Couldn\'t find attributes for: ' + notfound)
         }
+        setAttributeObj(object)
     }
     let updateInput = () => {
-        console.log(attributeObj)
         for (var i = 0; i < attributeObj.length; i++){
             if( document.querySelector('#calculator input[name="' + attributeObj[i].name.toLowerCase() + '"]') ){
                 document.querySelector('#calculator input[name="' + attributeObj[i].name.toLowerCase() + '"]').value = attributeObj[i].value
-            } else (
-                console.log('Couldn\'t find input named ' + attributeObj[i].name )
-            )
+            }
         }
         props.updateStats();
 
-    }
+    };
     useEffect(() => {
+        if(selectedImage !== null){
+            setNotFound('Loading...')
+        }
         doOCR();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[selectedImage]);
+    useEffect(() => {
         readText();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[text]);
+    useEffect(() => {
         updateInput();
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[attributeObj]);
     return(
         <div className="uploader">
             <input
             type="file"
             name="myImage"
             onChange={(event) => {
-                console.log(event.target.files[0]);
                 let img = event.target.files[0];
                 setSelectedImage(img);
             }}

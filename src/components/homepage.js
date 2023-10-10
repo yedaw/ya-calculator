@@ -279,12 +279,12 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Pace</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="sprintspeed" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="sprintspeed" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Sprint speed</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="acceleration" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="acceleration" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Acceleration</p>
                             </li>
                         </ul>
@@ -292,28 +292,28 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Shooting</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="finishing" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="finishing" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Finishing</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="positioning" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="positioning" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Att. Position</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="shotpower" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="shotpower" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Shot power</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="longshots" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="longshots" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Long shots</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="penalties" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="penalties" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Penalties</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="volleys" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="volleys" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Volleys</p>
                             </li>
                         </ul>
@@ -321,28 +321,28 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Passing</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="vision" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="vision" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Vision</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="crossing" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="crossing" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Crossing</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="freekick" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="freekick" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>FK Accuracy</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="longpassing" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="longpassing" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Long Pass</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="shortpassing" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="shortpassing" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Short Pass</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="curve" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="curve" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Curve</p>
                             </li>
                             
@@ -352,28 +352,28 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Dribbling</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="agility" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="agility" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Agility</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="balance" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="balance" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Balance</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="reactions" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="reactions" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Reactions</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="composure" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="composure" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Composure</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="ballcontrol" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="ballcontrol" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Ball control</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="dribbling" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="dribbling" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Dribbling</p>
                             </li>
                         </ul>
@@ -381,24 +381,24 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Defending</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="interceptions" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="interceptions" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Interceptions</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="heading" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="heading" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Heading Acc.</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="marking" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="marking" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Def. Aware</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="standingtackle" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="standingtackle" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Stand tackle</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="slidingtackle" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="slidingtackle" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Slide tackle</p>
                             </li>
                         </ul>
@@ -406,20 +406,20 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Physical</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="jumping" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="jumping" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Jumping</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="stamina" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="stamina" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Stamina</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="strength" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="strength" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Strength</p>
                             </li>
-                            <li className="ellipsis half-spacing">
-                                <input type="number" name="aggression" placeholder="0" className="calc bp3-input" size="2" max="99" min="0" onChange={() => {updateStats()}} />
+                            <li>
+                                <input type="number" name="aggression" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>Aggression</p>
                             </li>
                         </ul>
@@ -427,23 +427,23 @@ const Homepage = (props) => {
                     {/* <div className="card">
                         <h5>Goalkeeping</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
+                            <li>
                                 <input type="number" name="gkDiving" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>GK Diving</p>
                             </li>
-                            <li className="ellipsis half-spacing">
+                            <li>
                                 <input type="number" name="gkHandling" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>GK Handling</p>
                             </li>
-                            <li className="ellipsis half-spacing">
+                            <li>
                                 <input type="number" name="gkKicking" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>GK Kicking</p>
                             </li>
-                            <li className="ellipsis half-spacing">
+                            <li>
                                 <input type="number" name="gkPositioning" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}} />
                                 <p>GK Positioning</p>
                             </li>
-                            <li className="ellipsis half-spacing">
+                            <li>
                                 <input type="number" name="gkReflexes" placeholder="0" size="2" max="99" min="0" onChange={() => {updateStats()}}/>
                                 <p>GK Reflexes</p>
                             </li>
@@ -452,7 +452,7 @@ const Homepage = (props) => {
                     <div className="card">
                         <h5>Special</h5>
                         <ul>
-                            <li className="ellipsis half-spacing">
+                            <li>
                                 <input type="number" name="pt" placeholder="0" className="bp3-input p-99" size="2" max="99" min="0"  defaultValue={99} onChange={() => {updateStats()}} />
                                 <p>Potential</p>
                             </li>
